@@ -1,0 +1,37 @@
+@Assessment_back_end_HostAddress = http://localhost:5263
+
+POST {{Assessment_back_end_HostAddress}}/Artikel/
+Content-Type: application/json
+
+{
+  "Code": "ABC1234DEF",
+  "Naam": "Chrysant",
+  "PotMaat": 12,
+  "PlantHoogte": 23,
+  "ProductGroep": "planten"
+}
+
+###
+
+PUT {{Assessment_back_end_HostAddress}}/Artikel/
+Content-Type: application/json
+
+{
+  "Code": "ABC1234DEF",
+  "Naam": "Chrysant",
+  "PotMaat": 12,
+  "PlantHoogte": 23,
+  "Kleur": "Geel",
+  "ProductGroep": "planten"
+}
+
+###
+
+GET {{Assessment_back_end_HostAddress}}/Artikel/
+Accept: application/json
+
+###
+
+DELETE {{Assessment_back_end_HostAddress}}/Artikel/ABC1234DEF
+
+###
