@@ -17,6 +17,8 @@ public class ArtikelService
     {
         var check = VerifyLength(artikel);
         if (check != null) return new BadRequestObjectResult(check);
+        if (_context.Artikelen.Any(a => a.Code == artikel.Code))
+            return new BadRequestObjectResult("Er bestaat al een artikel met dezelfde code.");
         _context.Artikelen.Add(artikel);
 
         try

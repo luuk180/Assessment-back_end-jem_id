@@ -1,4 +1,4 @@
-@Assessment_back_end_HostAddress = http://localhost:5263
+@Assessment_back_end_HostAddress = https://assessment-luuk.azurewebsites.net
 
 POST {{Assessment_back_end_HostAddress}}/Artikel/
 Content-Type: application/json
